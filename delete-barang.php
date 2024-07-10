@@ -18,5 +18,3 @@ if (hapusBarang($id_barang) > 0) {
              document.location.href = 'index.php';
         </script>";
 }
-
-?>

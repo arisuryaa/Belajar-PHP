@@ -58,7 +58,7 @@ body {
 
 .foto img {
     width : auto;
-    height : 22rem;
+    height : 30rem;
 }
 
 
@@ -126,7 +126,7 @@ form input[type="password"] {
 
 <body> <div class="container">
         <div class="foto">
-            <img src="asset/img/WhatsApp Image 2024-07-08 at 15.40.30.jpeg" alt="">
+            <img src="asset/img/123.png" alt="">
         </div>
         <div class="forme">
             <form action="" method="POST">
