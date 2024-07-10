@@ -150,40 +150,13 @@ form input[type="password"] {
                 <div class="regist">
                     <span>
                         already have an account? 
-                        <a href="login.php">Login</a>
+                        <a href="index.php">Login</a>
                     </span>
                 </div>
             </form>
         </div>
     </div>
 
-
-
-    //<div class="foto">
-       <img src="asset/img/WhatsApp Image 2024-07-08 at 15.40.30.jpeg"alt="">
-  </div>
-    <div class="container mt-5 mb-5">
-        <h1>Register</h1>
-        <hr>
-        <form action="" method="POST">
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input required type="text" class="form-control" id="username" placeholder="masukkan username"
-                    name="username">
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input required type="password" class="form-control" id="password" placeholder="Masukkan Password"
-                    name="password">
-            </div>
-            <div class="mb-3">
-                <label for="password2" class="form-label">Konfirmasi Password</label>
-                <input required type="password" class="form-control" id="password2" placeholder="Konfirmasi Password"
-                    name="password2">
-            </div>
-            <button type="submit" name="submit" class="btn btn-primary">submit</button>
-        </form>
-    </div>
 </body>
 
 
