@@ -147,6 +147,39 @@ function update_mahasiswa($post) {
   return mysqli_affected_rows($db);
 }
 
+
+function login ($post) {
+  global $db;
+  $username = $post["username"];
+  $password = $post["password"];
+
+  // echo $post["remember"];
+  $data = mysqli_query($db, "SELECT * FROM akun WHERE username = '$username' ");
+
+  if(mysqli_num_rows($data) === 1) {
+      $row = mysqli_fetch_assoc($data);
+
+      if (password_verify($password, $row["password"])) {
+          echo "<script>
+              document.location.href = 'barang.php';
+          </script>";
+
+          $_SESSION["Login"] = true;
+          if(isset($post["remember"]) == "on") {
+            setcookie("login","sukarya", time() + 60 * 60 * 24 * 7);
+          }
+      }  
+  } else {
+      echo "<script>
+              alert('password/username Salah !');
+      </script>";
+  }  
+
+
+}
+
+
+
 function registrasi ($data) {
   global $db;
 
