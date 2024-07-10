@@ -133,7 +133,7 @@ form input[type="password"] {
                 <div class="mb-3 form-isi1">
                     <h1>Register Account</h1>
                     <p>Please Register Account</p>
-                    <input required type="text" class="form-control" id="username" placeholder="masukkan username"
+                    <input required type="text" class="form-control" id="username" placeholder="Masukkan username"
                         name="username">
                 </div>
                 <div class="mb-3 form-isi">
@@ -141,7 +141,7 @@ form input[type="password"] {
                         name="password">
                 </div>
                 <div class="mb-3 form-isi">
-                    <input required type="password" class="form-control" id="password2" placeholder="Masukkan password2"
+                    <input required type="password" class="form-control" id="password2" placeholder="Konfirmasi Password"
                         name="password2">
                 </div>
                 <div class="button-submit">
