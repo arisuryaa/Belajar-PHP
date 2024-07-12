@@ -29,18 +29,18 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="index.php">CRUD-PHP</a>
+            <a class="navbar-brand" href="index.php">CRUD!</a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Barang</a>
+                        <a class="nav-link" aria-current="page" href="index.php">Barang</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="mahasiswa.php">Mahasiswa</a>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <a href="logout.php" class="btn btn-outline-success" type="submit">Logout</a>
+                    <a href="logout.php" class="btn btn-danger" type="submit">Logout</a>
                 </form>
             </div>
         </div>
