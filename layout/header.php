@@ -218,23 +218,23 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
+                            <a href="mahasiswa.php" class="nav-link">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>
                                     Data Mahasiswa
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="pages/gallery.html" class="nav-link">
                                 <i class="nav-icon fas fa-users-cog"></i>
                                 <p>
                                     Data Akun
                                 </p>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
+                            <a href="Logout.php" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     Logout
