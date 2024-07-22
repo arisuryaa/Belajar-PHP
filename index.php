@@ -1,177 +1,160 @@
-<?php 
+<?php
+include "config/app.php";
+include "layout/header.php";
 
+$data_barang = select("SELECT * FROM barang");
 
-include 'config/app.php';
-session_start();
+// session_start();
 
-if(isset($_COOKIE["login"])) {
-    if($_COOKIE["login"] == "sukarya") {
-    $_SESSION["Login"] = true;
-      echo "
-      <script>
-        document.location.href = 'barang.php';
-      </script>
-    ";
-    }
-}
+    
+//     if(!isset($_SESSION["Login"])) {
+//         header("Location: index.php");
+//     }
 
-if (isset($_POST["submit"])) {
-
-    login($_POST);    
-   
-}
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <title>Register</title>
-    <style>
-    * {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-    }
-
-    body {
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .container {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        background-color: #f8f9fa;
-    }
-
-    .foto {
-        width: 50%;
-        height: 100%;
-        background-color: #0656d0;
-        box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .foto img {
-        width: auto;
-        height: 22rem;
-    }
-
-
-    .forme {
-        border: 1px solid black;
-        height: 100%;
-        width: 65%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    div .form-isi1 h1 {
-        padding-bottom: 10px;
-    }
-
-    div .form-isi1 p {
-        border-bottom: 1px solid gray;
-        padding-bottom: 20px;
-
-    }
-
-    form input[type="text"] {
-        width: 95%;
-        padding: 10px;
-        display: block;
-        margin: 15px 0;
-        border: 1px solid #000000;
-        border-radius: 5px;
-        background-color: #fff;
-    }
-
-    form input[type="password"] {
-        width: 95%;
-        padding: 10px;
-        display: block;
-        margin: 15px 0;
-        border: 1px solid #000000;
-        border-radius: 5px;
-        background-color: #fff;
-    }
-
-    .button-submit button {
-        background-color: #007bff;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        width: 100%;
-    }
-
-    .regist {
-        padding-top: 1.4rem;
-        text-align: center;
-    }
-
-    .regist a {
-        text-decoration: none;
-        color: #007bff;
-    }
-
-    .checkbox {
-        margin-bottom: 10px;
-    }
-    </style>
-</head>
-
-<body>
-
-    <div class="container">
-        <div class="foto">
-            <img src="asset/img/code.png" alt="">
-        </div>
-        <div class="forme">
-            <form action="" method="POST">
-                <div class="mb-3 form-isi1">
-                    <h1>Log In to your Account</h1>
-                    <p>Welcome Back! Please Login Account</p>
-                    <input required type="text" class="form-control" id="username" placeholder="masukkan username"
-                        name="username">
-                </div>
-                <div class="mb-3 form-isi">
-                    <input required type="password" class="form-control" id="password" placeholder="Masukkan Password"
-                        name="password">
-                </div>
-                <div class="mb-3 form-isi checkbox">
-                    <input type="checkbox" class="form-control" id="remember" placeholder="Masukkan Password"
-                        name="remember">
-                    <label for="remember">Remember Me</label>
-                </div>
-                <div class="button-submit">
-                    <button type="submit" name="submit">Submit</button>
-                </div>
-                <div class="regist">
-                    <span>
-                        don't have an account?
-                        <a href="register.php">Register</a>
-                    </span>
-                </div>
-            </form>
-        </div>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Data Barang</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Data Barang</a></li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
     </div>
+    <!-- /.content-header -->
 
-</body>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-info">
+                        <div class="inner">
+                            <h3>150</h3>
 
-<?php include "layout/footer.php"; ?>
+                            <p>New Orders</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-bag"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-success">
+                        <div class="inner">
+                            <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-</html>
+                            <p>Bounce Rate</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-stats-bars"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-warning">
+                        <div class="inner">
+                            <h3>44</h3>
+
+                            <p>User Registrations</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-person-add"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-danger">
+                        <div class="inner">
+                            <h3>65</h3>
+
+                            <p>Unique Visitors</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-pie-graph"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <!-- <div class="card-header">
+                                    <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                                </div> -->
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <a href="form-tambah.php"><button type="button"
+                                            class="btn btn-primary mb-3">tambah</button></a>
+                                    <table id="example2" class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Nama</th>
+                                                <th>Jumlah</th>
+                                                <th>Harga</th>
+                                                <th>Tanggal</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $no = 1; ?>
+                                            <?php foreach($data_barang as $barang) : ?>
+                                            <tr>
+                                                <td><?= $no ?></td>
+                                                <td><?= $barang['nama'] ?></td>
+                                                <td><?= $barang['jumlah'] ?></td>
+                                                <td>Rp. <?= number_format($barang['harga'],0,',','.') ?></td>
+                                                <td><?= date('d/m/Y', strtotime($barang['tanggal'])) ?></td>
+                                                <td>
+                                                    <a href="edit-barang.php?id_barang=<?= $barang['id_barang']; ?>"
+                                                        class="btn btn-success ">Edit</a>
+                                                    <a href="delete-barang.php?id_barang=<?= $barang['id_barang']; ?>"
+                                                        class="btn btn-danger" id="del"
+                                                        onclick="return confirm('apakah yakin ingin menghapus data')">Delete</a>
+                                                </td>
+                                            </tr>
+                                            <?php $no++ ?>
+                                            <?php endforeach; ?>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+
+
+                        </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <?php include "layout/footer.php";?>
