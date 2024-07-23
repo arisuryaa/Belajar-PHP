@@ -61,11 +61,17 @@ $namaFile = pathinfo($namaFilePenuh, PATHINFO_FILENAME);
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
+             <div class="container-fluid">
+            
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
+            <div class="d-flex">
+
+                <a href="logout.php">
+                  <button type="button" class="btn btn-danger mr-3">Logout</button>
+                  </a>
+                </div>
             </ul>
+            </div>
 
 
         </nav>
@@ -114,15 +120,6 @@ $namaFile = pathinfo($namaFilePenuh, PATHINFO_FILENAME);
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="Logout.php" class="nav-link">
-                                <i class="nav-icon fas fa-sign-out-alt"></i>
-                                <p>
-                                    Logout
-                                </p>
-                            </a>
-                        </li>
-
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
