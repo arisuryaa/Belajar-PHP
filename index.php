@@ -6,10 +6,13 @@ $data_barang = select("SELECT * FROM barang");
 
 // session_start();
 
-    
-//     if(!isset($_SESSION["Login"])) {
-//         header("Location: index.php");
-//     }
+    if(!isset($_SESSION["Login"])) {
+        echo "
+        <script>
+          document.location.href = 'login.php';
+        </script>
+      ";
+    }
 
 
 ?>
