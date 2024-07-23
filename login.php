@@ -3,22 +3,19 @@
 
 include 'config/app.php';
 session_start();
-
 if(isset($_COOKIE["login"])) {
     if($_COOKIE["login"] == "sukarya") {
     $_SESSION["Login"] = true;
       echo "
       <script>
-        document.location.href = 'barang.php';
+        document.location.href = 'index.php';
       </script>
     ";
     }
 }
 
 if (isset($_POST["submit"])) {
-
     login($_POST);    
-   
 }
 
 ?>
