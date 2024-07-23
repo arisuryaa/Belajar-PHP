@@ -129,3 +129,15 @@ $namaFile = pathinfo($namaFilePenuh, PATHINFO_FILENAME);
             </div>
             <!-- /.sidebar -->
         </aside>
+         <!-- jQuery -->
+         <script src="assets-adminLTE/plugins/jquery/jquery.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="assets-adminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="assets-adminLTE/dist/js/adminlte.min.js"></script>
+        <!-- Custom script to initialize PushMenu -->
+        <script>
+            $(document).ready(function () {
+                $('[data-widget="pushmenu"]').PushMenu();
+            });
+        </script>
