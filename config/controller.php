@@ -95,7 +95,7 @@ function uploadFile() {
     echo "
       <script>
         alert('ukuran file terlalu besar, maximal 2MB')
-        document.location.href = 'form-tambah-mahasiswa.php';
+        document.location.href = 'mahasiswa.php';
       </script>
     ";
     die();
