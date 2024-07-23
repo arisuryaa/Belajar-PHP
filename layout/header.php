@@ -114,14 +114,6 @@ $namaFile = pathinfo($namaFilePenuh, PATHINFO_FILENAME);
                                 </p>
                             </a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a href="pages/gallery.html" class="nav-link">
-                                <i class="nav-icon fas fa-users-cog"></i>
-                                <p>
-                                    Data Akun
-                                </p>
-                            </a>
-                        </li> -->
                         <li class="nav-item">
                             <a href="Logout.php" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
