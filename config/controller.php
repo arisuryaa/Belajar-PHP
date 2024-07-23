@@ -160,14 +160,17 @@ function login ($post) {
       $row = mysqli_fetch_assoc($data);
 
       if (password_verify($password, $row["password"])) {
-          echo "<script>
-              document.location.href = 'barang.php';
-          </script>";
-
-          $_SESSION["Login"] = true;
+             $_SESSION["Login"] = true;
+             $_SESSION["username"] = $username;
+            
           if(isset($post["remember"]) == "on") {
             setcookie("login","sukarya", time() + 60 * 60 * 24 * 7);
           }
+      
+
+          echo "<script>
+          document.location.href = 'index.php';
+      </script>";
       }  
   } else {
       echo "<script>
