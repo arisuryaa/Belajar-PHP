@@ -162,6 +162,7 @@ function login ($post) {
       if (password_verify($password, $row["password"])) {
              $_SESSION["Login"] = true;
              $_SESSION["username"] = $username;
+             setcookie("username",$username, time() + 60 * 60 * 24 * 7);
             
           if(isset($post["remember"]) == "on") {
             setcookie("login","sukarya", time() + 60 * 60 * 24 * 7);

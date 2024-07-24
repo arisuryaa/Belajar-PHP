@@ -61,16 +61,16 @@ $namaFile = pathinfo($namaFilePenuh, PATHINFO_FILENAME);
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
-             <div class="container-fluid">
-            
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            <div class="d-flex">
+            <div class="container-fluid">
 
-                <a href="logout.php">
-                  <button type="button" class="btn btn-danger mr-3">Logout</button>
-                  </a>
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                <div class="d-flex">
+
+                    <a href="logout.php">
+                        <button type="button" class="btn btn-danger mr-3">Logout</button>
+                    </a>
                 </div>
-            </ul>
+                </ul>
             </div>
 
 
@@ -94,7 +94,7 @@ $namaFile = pathinfo($namaFilePenuh, PATHINFO_FILENAME);
                         <img src="asset/img/ijat.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block"><?= $_SESSION["username"] ?></a>
+                        <a href="#" class="d-block"><?= $_COOKIE["username"] ?></a>
                     </div>
                 </div>
 
@@ -126,15 +126,15 @@ $namaFile = pathinfo($namaFilePenuh, PATHINFO_FILENAME);
             </div>
             <!-- /.sidebar -->
         </aside>
-         <!-- jQuery -->
-         <script src="assets-adminLTE/plugins/jquery/jquery.min.js"></script>
+        <!-- jQuery -->
+        <script src="assets-adminLTE/plugins/jquery/jquery.min.js"></script>
         <!-- Bootstrap 4 -->
         <script src="assets-adminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
         <!-- AdminLTE App -->
         <script src="assets-adminLTE/dist/js/adminlte.min.js"></script>
         <!-- Custom script to initialize PushMenu -->
         <script>
-            $(document).ready(function () {
-                $('[data-widget="pushmenu"]').PushMenu();
-            });
+        $(document).ready(function() {
+            $('[data-widget="pushmenu"]').PushMenu();
+        });
         </script>

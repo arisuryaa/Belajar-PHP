@@ -2,6 +2,7 @@
 include "config/app.php";
 include "layout/header.php";
 
+
 $data_barang = select("SELECT * FROM barang");
 $data_mahasiswa = select("SELECT * FROM mahasiswa");
 $data_admin = select("SELECT * FROM akun");
