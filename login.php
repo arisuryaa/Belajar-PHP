@@ -130,6 +130,41 @@ if (isset($_POST["submit"])) {
     .checkbox {
         margin-bottom: 10px;
     }
+
+    @media(max-width: 480px) {
+
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .foto {
+            display: none;
+       }
+
+        .forme {
+            border: none;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+
+        .form-isi1 h1 {
+            font-size: 27px;
+        }
+
+        #karya {
+            border: 1px solid #fafafa;
+            background-color: #ebefef;
+        }
+
+    }
     </style>
 </head>
 
@@ -144,11 +179,11 @@ if (isset($_POST["submit"])) {
                 <div class="mb-3 form-isi1">
                     <h1>Log In to your Account</h1>
                     <p>Welcome Back! Please Login Account</p>
-                    <input required type="text" class="form-control" id="username" placeholder="masukkan username"
+                    <input id="karya" required type="text" class="form-control" id="username" placeholder="masukkan username"
                         name="username">
                 </div>
                 <div class="mb-3 form-isi">
-                    <input required type="password" class="form-control" id="password" placeholder="Masukkan Password"
+                    <input id="karya" required type="password" class="form-control" id="password" placeholder="Masukkan Password"
                         name="password">
                 </div>
                 <div class="mb-3 form-isi checkbox">
